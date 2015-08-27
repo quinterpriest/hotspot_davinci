@@ -1,49 +1,78 @@
+<!doctype html>
 <html>
-<head>
-<title>mikrotik hotspot > redirect</title>
-<meta http-equiv="refresh" content="2; url=$(link-redirect)">
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<meta http-equiv="pragma" content="no-cache">
-<meta http-equiv="expires" content="-1">
-<style type="text/css">
-<!--
-textarea,input,select {
-	background-color: #FDFBFB;
-	border: 1px #BBBBBB solid;
-	padding: 2px;
-	margin: 1px;
-	font-size: 14px;
-	color: #808080;
-}
+	<head>
+		<title>internet hotspot > redirect</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="pragma" content="no-cache" />		
+		<meta http-equiv="refresh" content="2; url=$(link-redirect)">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="expires" content="-1">
 
-body{ color: #737373; font-size: 12px; font-family: verdana; }
 
-a, a:link, a:visited, a:active { color: #AAAAAA; text-decoration: none; font-size: 12px; }
-a:hover { border-bottom: 1px dotted #c1c1c1; color: #AAAAAA; }
-img {border: none;}
-td { font-size: 12px; color: #7A7A7A; }
+		<link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/custom.css">
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+		<style type="text/css">
+		textarea,input,select {
+		background-color: #FDFBFB;
+		border: 1px solid #BBBBBB;
+		padding: 2px;
+		margin: 1px;
+		font-size: 14px;
+		color: #808080;
+		}
+		a, a:link, a:visited, a:active { color: #AAAAAA; text-decoration: none; }
+		a:hover { border-bottom: 1px dotted #c1c1c1; color: #AAAAAA; }
+		img {border: none;}
+		td { font-size: 14px; color: #7A7A7A; }
+		</style>
 
--->
-</style>
-<script language="JavaScript">
-<!--
-    function startClock() {
-        $(if popup == 'true')
-        open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
-	$(endif)
-	location.href = '$(link-redirect)';
-    }
-//-->
-</script>
-</head>
-<body onLoad="startClock()">
-<table width="100%" height="100%">
-<tr>
-	<td align="center" valign="middle">
-	You are logged in
+		<script language="JavaScript">
+		<!--
+		    function startClock() {
+		        $(if popup == 'true')
+		        open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
+			$(endif)
+			location.href = '$(link-redirect)';
+		    }
+		//-->
+		</script>
+	</head>
+	<body onLoad="startClock()">
+		
+		<div class="container">
+			
+			<div class="row vertical-offset-100">
+				<div class="col-md-4 col-md-offset-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="row-fluid user-row">
+								<a href="$(link-login-only)?target=lv&amp;dst=$(link-orig-esc)">
+									<img src="img/logo.png" class="img-responsive" alt="Conxole Admin"/>
+								</a>
+							</div>
+						</div>
+						<div class="panel-body">
+							Estas Logueado
 	<br><br>
-	If nothing happens, click <a href="$(link-redirect)">here</a></td>
-</tr>
-</table>
-</body>
+	Si no pasa nada, da click <a href="$(link-redirect)">aqui</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="row text-center" style="padding:20px;">
+				<a href="http://smartmarket.com.co/contacto.html"  style="color:#547CBE;">
+					<!-- cambiar aqui mensaje de copyright-->
+					Desarrollado por Smartmarket S.A.S &copy;
+
+				</a>
+			</div>
+		</div>
+		
+	</body>
 </html>
